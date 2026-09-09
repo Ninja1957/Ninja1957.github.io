@@ -1,4 +1,31 @@
-
 import posts from '../lib/posts.json';
-const subjectPaths:Record<string,string>={"数学": "math", "物理": "physics", "计算机": "computing", "化学": "chemistry", "生命科学": "biology", "随笔": "essays"};
-export default function Home(){return <><header className="masthead"><div className="brand"><a href="/">求知手记<span>NOTES & OBSERVATIONS</span></a><p>在学科之间漫游，在细节之中求知。</p></div><nav aria-label="主导航"><a href="#notes">文章</a><a href="#subjects">学科</a><a href="#about">关于</a></nav></header><div className="category-bar"><span>学科索引</span>{['数学','物理','计算机','化学','生命科学','随笔'].map(x=><a href={'/subjects/'+subjectPaths[x]+'/'} key={x}>{x}</a>)}</div><div className="page-grid"><main id="notes"><div className="section-title"><h1>最近的记录</h1><span>从思考到实践</span></div>{posts.map((p,i)=><article className="post" key={p.slug}><div className="date"><b>{p.date.slice(8)}</b><span>{p.date.slice(0,7)}</span></div><div className="post-content"><div className="meta">{p.category}<span>·</span>{p.demo?'示例内容':'笔记'}</div><h2><a href={'/notes/'+p.slug+'/'}>{p.title}</a></h2><p>{p.summary}</p>{p.slug==='math-demo'&&<div className="equation">A<b>v</b> = λ<b>v</b><small>变换中的不变方向</small></div>}<div className="post-bottom"><span>{p.tags.map(t=><span key={t} className="tag">{t}</span>)}</span><a href={'/notes/'+p.slug+'/'}>阅读全文 ↗</a></div></div></article>)}<p className="endnote">每一篇笔记，都是下一次探索的起点。</p></main><aside><section id="about"><span className="eyebrow">ABOUT THIS NOTEBOOK</span><h2>你好，欢迎来坐坐。</h2><p>这里是我的个人学习空间。记录各学科的笔记、实验中的发现，以及一些还没有答案的问题。</p><div className="side-rule"/><p className="small">保持好奇，认真记录。<br/>让零散的理解，渐渐连成一片。</p></section><section id="subjects"><h2>按学科翻阅 <span>INDEX</span></h2>{['数学','物理','计算机','化学','生命科学','随笔'].map((x,i)=><a href={'/subjects/'+subjectPaths[x]+'/'} id={x} className="subject" key={x}><span><i>0{i+1}</i>{x}</span><span>{String(posts.filter(p=>p.category===x).length).padStart(2,'0')}</span></a>)}</section><section><h2>记录的方式</h2><p className="small">文字与公式 · 理清思路<br/>图片与图表 · 留下观察<br/>视频链接 · 回看过程</p></section></aside></div><footer><span>求知手记 © 2026</span><span>写下所学，保留所问。</span></footer></>}
+import { VisitCount } from './visits';
+const subjects = [{name:'数学',path:'math',symbol:'01'}, {name:'物理',path:'physics',symbol:'02'}, {name:'计算机',path:'computing',symbol:'03'}, {name:'随笔',path:'essays',symbol:'04'}];
+export default function Home() {
+  return <>
+    <header className="masthead">
+      <div className="brand"><a href="/"><span className="brand-mark" aria-hidden="true">学</span><span className="brand-name">学习笔记<small>LEARNING JOURNAL</small></span></a></div>
+      <nav aria-label="主导航"><a className="current" href="#notes">文章</a><a href="#subjects">学科</a><a href="#about">关于</a></nav>
+    </header>
+    <div className="category-bar"><span>探索学科</span>{subjects.map(s=><a key={s.path} href={'/subjects/'+s.path+'/'}>{s.name}<span aria-hidden="true">↗</span></a>)}</div>
+    <div className="page-grid">
+      <main id="notes">
+        <div className="section-title"><div><span className="eyebrow">THE NOTEBOOK</span><h1>最近的记录<span className="article-count">{String(posts.length).padStart(2,'0')}</span></h1></div><span>思考 · 观察 · 实践</span></div>
+        <div className="post-list">{posts.map(p=><article className="post" key={p.slug}>
+          <div className="date"><b>{p.date.slice(8)}</b><span>{p.date.slice(0,7)}</span></div>
+          <div className="post-content"><div className="meta"><a href={'/subjects/'+subjects.find(s=>s.name===p.category)?.path+'/'}>{p.category}</a><span className="meta-dot">·</span><span>{p.demo?'示例内容':'笔记'}</span></div>
+            <h2><a href={'/notes/'+p.slug+'/'}>{p.title}</a></h2><p>{p.summary}</p>
+            {p.slug==='math-demo'&&<div className="equation">A<b>v</b> = λ<b>v</b><small>变换中的不变方向</small></div>}
+            <div className="post-bottom"><span>{p.tags.map(t=><span className="tag" key={t}>{t}</span>)}</span><a className="read-link" href={'/notes/'+p.slug+'/'}>阅读全文 <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>)}</div><p className="endnote">写下所学，保留所问。</p>
+      </main>
+      <aside>
+        <section className="about-card" id="about"><span className="eyebrow">A PLACE TO THINK</span><h2>保持好奇，<br/>认真记录。</h2><p>这里是我的个人学习空间。记录各学科的笔记、实验中的发现，以及一些还没有答案的问题。</p><div className="side-rule"/><span className="about-signature">学习笔记 / Learning Journal</span></section>
+        <section id="subjects"><h2>按学科翻阅 <span>INDEX</span></h2>{subjects.map(s=><a className="subject" href={'/subjects/'+s.path+'/'} key={s.path}><span><i>{s.symbol}</i>{s.name}</span><span>{String(posts.filter(p=>p.category===s.name).length).padStart(2,'0')} <b aria-hidden="true">↗</b></span></a>)}</section>
+        <section className="visit-card"><h2>来访记录 <span>VISITS</span></h2><VisitCount/><p className="small">每一次来访，都是一次交流的开始。</p></section>
+      </aside>
+    </div>
+    <footer><span>学习笔记 © 2026</span><span>文字 · 公式 · 实验 · 观察</span></footer>
+  </>;
+}
