@@ -4,7 +4,7 @@ category: 数学
 date: 2026-09-09
 tags: 概率论
 summary: 
-demo: true
+demo: false
 ---
 
 #### 1、“熵”     **Shannon Entropy（香农熵）**
