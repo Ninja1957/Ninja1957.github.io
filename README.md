@@ -4,7 +4,7 @@
 
 ## 发布一篇笔记
 
-在 GitHub 仓库的 **content** 文件夹选择 **Add file → Create new file**，用英文字母、数字与连字符命名，例如 `probability-notes.md`，复制以下内容后提交到 main：
+在本地仓库的 **content** 文件夹添加 Markdown 文件，用英文字母、数字与连字符命名，例如 `probability-notes.md`。整理正文和引用图片后，本地构建检查、提交并推送 main，再按下方说明通过网页发布：
 
 ```markdown
 ---
@@ -40,9 +40,9 @@ $$
 
 首页与名字：`app/page.tsx`；页面信息：`app/layout.tsx`；样式：`app/globals.css`。文章页布局：`app/article.tsx`。
 
-## 自动发布
+## 网页触发发布
 
-仓库 Settings → Pages → Source 选择 GitHub Actions。每次提交到 main 自动生成网页并发布。可在 Actions 查看进度。
+仓库 Settings → Pages → Source 选择 GitHub Actions。推送到 main 只保存源码，不自动部署。准备上线时，在 **Actions → Publish notebook → Run workflow** 选择 **main** 并点击运行。等待该提交对应的 build 和 deploy 均成功，再检查文章、首页分类入口及图片。
 
 本地：`npm ci` 后运行 `npm run dev`；修改 Markdown 后重新启动预览。生成静态站点：`npm run build`，输出在 `dist/client/`。
 
