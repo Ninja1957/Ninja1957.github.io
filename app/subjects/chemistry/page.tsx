@@ -1,0 +1,2 @@
+export const dynamic = 'force-static';
+import posts from '../../../lib/posts.json';export const metadata={title:"化学"};export default function Page(){const items=posts.filter(p=>p.category==="化学");return <main className="reading"><a className="article-nav" href="/">← 全部笔记</a><h1>化学</h1>{items.length?items.map(p=><article className="post" key={p.slug}><div className="post-content"><div className="meta">{p.date} · {p.demo?'示例笔记':'笔记'}</div><h2><a href={'/notes/'+p.slug+'/'}>{p.title}</a></h2><p>{p.summary}</p></div></article>):<p>这一页还没有笔记，留待下一次探索。</p>}</main>}

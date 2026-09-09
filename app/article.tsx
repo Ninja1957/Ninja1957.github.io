@@ -1,0 +1,4 @@
+
+import 'katex/dist/katex.min.css';
+type Post={title:string;date:string;category:string;demo:boolean;html:string;toc:{id:string;text:string}[]};
+export default function Article({post}: {post:Post}){return <><header className="masthead"><div className="brand"><a href="/">求知手记<span>NOTES & OBSERVATIONS</span></a></div><nav><a href="/">返回首页 ↗</a></nav></header><main className="reading"><div className="meta">{post.category} · {post.date}</div><h1>{post.title}</h1>{post.demo&&<p className="demo-label">示例笔记 · 用于展示文章格式</p>}<nav className="toc" aria-label="文章目录">{post.toc.map(t=><a href={'#'+t.id} key={t.id}>{t.text}</a>)}</nav><div className="prose" dangerouslySetInnerHTML={{__html:post.html}}/><div className="side-rule"/><a className="article-nav" href="/">← 返回全部笔记</a></main><footer><span>求知手记</span><span>写下所学，保留所问。</span></footer></>}

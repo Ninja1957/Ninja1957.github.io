@@ -1,0 +1,95 @@
+[
+  {
+    "title": "实验记录：观察、测量与误差",
+    "category": "物理",
+    "date": "2026-09-09",
+    "tags": [
+      "实验记录",
+      "测量"
+    ],
+    "summary": "为每次实验留下可追溯的记录：实验条件、原始数据、图片、视频与尚未解决的问题。",
+    "demo": true,
+    "slug": "experiment-demo",
+    "html": "<blockquote>\n<p>这是实验记录模板，尚未填入真实测量结果。</p>\n</blockquote>\n<h2 id=\"section-1\">实验问题</h2><p>写下要验证的现象、假设，以及判断假设是否成立的依据。</p>\n<h2 id=\"section-2\">条件与步骤</h2><ol>\n<li>记录实验日期、仪器、环境条件和参数。</li>\n<li>写下可重复操作的实验步骤。</li>\n<li>保留原始记录，区分直接测量与计算结果。</li>\n</ol>\n<h2 id=\"section-3\">实验图片</h2><p>把照片放入仓库的 <code>public/images/</code> 文件夹，然后在文章中使用：</p>\n<pre><code class=\"language-markdown\">![装置全貌与关键测量位置](/images/setup.jpg)\n</code></pre>\n<p>建议在图片下补充拍摄条件、单位和观察结论。</p>\n<h2 id=\"section-4\">视频记录</h2><p>把 B 站、YouTube 或其他平台的视频地址粘贴到 Markdown 链接中：</p>\n<pre><code class=\"language-markdown\">[观看实验过程](在这里粘贴完整的视频网址)\n</code></pre>\n<h2 id=\"section-5\">数据与结论</h2><table>\n<thead>\n<tr>\n<th>测量项目</th>\n<th>原始结果</th>\n<th>单位</th>\n<th>备注</th>\n</tr>\n</thead>\n<tbody><tr>\n<td>待填写</td>\n<td>—</td>\n<td>—</td>\n<td>请保留测量条件</td>\n</tr>\n</tbody></table>\n<h2 id=\"section-6\">误差与下一步</h2><p>记录潜在误差来源、异常现象，以及下一次需要调整的步骤。</p>\n",
+    "toc": [
+      {
+        "id": "section-1",
+        "text": "实验问题"
+      },
+      {
+        "id": "section-2",
+        "text": "条件与步骤"
+      },
+      {
+        "id": "section-3",
+        "text": "实验图片"
+      },
+      {
+        "id": "section-4",
+        "text": "视频记录"
+      },
+      {
+        "id": "section-5",
+        "text": "数据与结论"
+      },
+      {
+        "id": "section-6",
+        "text": "误差与下一步"
+      }
+    ]
+  },
+  {
+    "title": "从一个问题开始，慢慢建立自己的知识地图",
+    "category": "随笔",
+    "date": "2026-09-09",
+    "tags": [
+      "开篇",
+      "学习方法"
+    ],
+    "summary": "这里将收集各学科的学习笔记、推导过程与实验记录。保留问题，也保留走向答案的过程。",
+    "slug": "first-note",
+    "demo": false,
+    "html": "<p>这里是求知手记，一个逐渐生长的个人学习空间。</p>\n<h2 id=\"section-1\">为什么记录</h2><p>有些理解在阅读时很清晰，合上书却又模糊了。把推导重新写一遍，把实验中看到的现象留下来，是让知识真正沉淀的一种方式。</p>\n<h2 id=\"section-2\">这里会有什么</h2><ul>\n<li><strong>学科笔记</strong>：概念、公式、推导与例题。</li>\n<li><strong>实验记录</strong>：条件、步骤、原始观察和误差分析。</li>\n<li><strong>图片与视频</strong>：为文字保留更具体的现场。</li>\n<li><strong>尚未解决的问题</strong>：不急着给出答案，也是一种进展。</li>\n</ul>\n<h2 id=\"section-3\">写在开始</h2><blockquote>\n<p>记录所知，也记录未知。</p>\n</blockquote>\n<p>这篇开篇文字可以随时替换为你自己的介绍。</p>\n",
+    "toc": [
+      {
+        "id": "section-1",
+        "text": "为什么记录"
+      },
+      {
+        "id": "section-2",
+        "text": "这里会有什么"
+      },
+      {
+        "id": "section-3",
+        "text": "写在开始"
+      }
+    ]
+  },
+  {
+    "title": "线性代数笔记：从向量到线性变换",
+    "category": "数学",
+    "date": "2026-09-09",
+    "tags": [
+      "线性代数",
+      "特征值"
+    ],
+    "summary": "把矩阵看作一种变换：从二维空间的伸缩与旋转出发，重新理解特征向量与特征值。",
+    "demo": true,
+    "slug": "math-demo",
+    "html": "<blockquote>\n<p>本文是排版示例，可替换为自己的学习笔记。</p>\n</blockquote>\n<h2 id=\"section-1\">线性变换</h2><p>矩阵可以描述向量空间上的线性变换。对于向量 <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi mathvariant=\"bold\">v</mi></mrow><annotation encoding=\"application/x-tex\">\\mathbf{v}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"katex-base\"><span class=\"katex-strut\" style=\"height:0.4444em;\"></span><span class=\"mord mathbf\" style=\"margin-right:0.016em;\">v</span></span></span></span>，左乘矩阵 <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>A</mi></mrow><annotation encoding=\"application/x-tex\">A</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"katex-base\"><span class=\"katex-strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\">A</span></span></span></span> 后得到新的向量 <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>A</mi><mi mathvariant=\"bold\">v</mi></mrow><annotation encoding=\"application/x-tex\">A\\mathbf{v}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"katex-base\"><span class=\"katex-strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\">A</span><span class=\"mord mathbf\" style=\"margin-right:0.016em;\">v</span></span></span></span>。</p>\n<h2 id=\"section-2\">不变的方向</h2><p>若非零向量 <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi mathvariant=\"bold\">v</mi></mrow><annotation encoding=\"application/x-tex\">\\mathbf{v}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"katex-base\"><span class=\"katex-strut\" style=\"height:0.4444em;\"></span><span class=\"mord mathbf\" style=\"margin-right:0.016em;\">v</span></span></span></span> 满足</p>\n<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>A</mi><mi mathvariant=\"bold\">v</mi><mo>=</mo><mi>λ</mi><mi mathvariant=\"bold\">v</mi></mrow><annotation encoding=\"application/x-tex\">A\\mathbf{v}=\\lambda\\mathbf{v}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"katex-base\"><span class=\"katex-strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\">A</span><span class=\"mord mathbf\" style=\"margin-right:0.016em;\">v</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"katex-base\"><span class=\"katex-strut\" style=\"height:0.6944em;\"></span><span class=\"mord mathnormal\">λ</span><span class=\"mord mathbf\" style=\"margin-right:0.016em;\">v</span></span></span></span></span><p>那么它就是矩阵 <span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>A</mi></mrow><annotation encoding=\"application/x-tex\">A</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"katex-base\"><span class=\"katex-strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\">A</span></span></span></span> 的一个特征向量，<span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\"><semantics><mrow><mi>λ</mi></mrow><annotation encoding=\"application/x-tex\">\\lambda</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"katex-base\"><span class=\"katex-strut\" style=\"height:0.6944em;\"></span><span class=\"mord mathnormal\">λ</span></span></span></span> 是对应的特征值。</p>\n<p>例如，对角矩阵</p>\n<span class=\"katex-display\"><span class=\"katex\"><span class=\"katex-mathml\"><math xmlns=\"http://www.w3.org/1998/Math/MathML\" display=\"block\"><semantics><mrow><mi>A</mi><mo>=</mo><mrow><mo fence=\"true\">(</mo><mtable rowspacing=\"0.16em\" columnalign=\"center center\" columnspacing=\"1em\"><mtr><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mn>2</mn></mstyle></mtd><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mn>0</mn></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mn>0</mn></mstyle></mtd><mtd><mstyle scriptlevel=\"0\" displaystyle=\"false\"><mn>3</mn></mstyle></mtd></mtr></mtable><mo fence=\"true\">)</mo></mrow></mrow><annotation encoding=\"application/x-tex\">A=\\begin{pmatrix}2&amp;0\\\\0&amp;3\\end{pmatrix}</annotation></semantics></math></span><span class=\"katex-html\" aria-hidden=\"true\"><span class=\"katex-base\"><span class=\"katex-strut\" style=\"height:0.6833em;\"></span><span class=\"mord mathnormal\">A</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span><span class=\"mrel\">=</span><span class=\"mspace\" style=\"margin-right:0.2778em;\"></span></span><span class=\"katex-base\"><span class=\"katex-strut\" style=\"height:2.4em;vertical-align:-0.95em;\"></span><span class=\"minner\"><span class=\"mopen delimcenter\" style=\"top:0em;\"><span class=\"delimsizing size3\">(</span></span><span class=\"mord\"><span class=\"mtable\"><span class=\"col-align-c\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.45em;\"><span style=\"top:-3.61em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">2</span></span></span><span style=\"top:-2.41em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">0</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.95em;\"><span></span></span></span></span></span><span class=\"arraycolsep\" style=\"width:0.5em;\"></span><span class=\"arraycolsep\" style=\"width:0.5em;\"></span><span class=\"col-align-c\"><span class=\"vlist-t vlist-t2\"><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:1.45em;\"><span style=\"top:-3.61em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">0</span></span></span><span style=\"top:-2.41em;\"><span class=\"pstrut\" style=\"height:3em;\"></span><span class=\"mord\"><span class=\"mord\">3</span></span></span></span><span class=\"vlist-s\">​</span></span><span class=\"vlist-r\"><span class=\"vlist\" style=\"height:0.95em;\"><span></span></span></span></span></span></span></span><span class=\"mclose delimcenter\" style=\"top:0em;\"><span class=\"delimsizing size3\">)</span></span></span></span></span></span></span><p>分别沿两个坐标轴把向量分量放大到原来的 2 倍与 3 倍。</p>\n<h2 id=\"section-3\">留给自己的问题</h2><ul>\n<li>哪些实矩阵没有实特征值？</li>\n<li>从几何上，如何理解重特征值？</li>\n<li>一组特征向量在什么条件下构成基？</li>\n</ul>\n",
+    "toc": [
+      {
+        "id": "section-1",
+        "text": "线性变换"
+      },
+      {
+        "id": "section-2",
+        "text": "不变的方向"
+      },
+      {
+        "id": "section-3",
+        "text": "留给自己的问题"
+      }
+    ]
+  }
+]
